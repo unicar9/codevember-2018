@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Time</title>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+      background: #8785a2;
+    }
+
+    button {
+      position: absolute;
+      top: 10%;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 1;
+      width: 100px;
+      height: 40px;
+      border-radius: 5px;
+      font-size: 18px;
+      color: white;
+      background: transparent;
+      border: 1px solid white;
+      transition: all .3s ease-in-out;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: white;
+      color: #8785a2;
+    }
+
+    canvas {
+      transition: transform 1s ease;
+    }
+
+    canvas.flip {
+      transform: rotate(180deg);
+    }
+
+  </style>
+  <script src="js/matter.min.js"></script>
+</head>
+<body>
+
+  <button onclick="app.flipCanvas()">FLIP</button>
+  
+  <script src="js/main.js"></script>
+</body>
+</html>
