@@ -21,24 +21,6 @@ let tV = 0
 let flip = false
 let rotating = true
 
-// function makeGrid(xSize, ySize, zHeight, gridColor) {
-//     for (x = 0; x < xSize + 1; x++) {
-//       iso.add(new Path([
-//         new Point(x, 0, zHeight),
-//         new Point(x, xSize, zHeight),
-//         new Point(x, 0, zHeight)
-//       ]), gridColor);
-//     }
-//     for (y = 0; y < ySize + 1; y++) {
-//       iso.add(new Path([
-//         new Point(0, y, zHeight),
-//         new Point(ySize, y, zHeight),
-//         new Point(0, y, zHeight)
-//       ]), gridColor);
-//     }
-// }
-
-
 function draw() {
     // clear the canvas
     iso.canvas.clear();
@@ -61,7 +43,6 @@ function draw() {
     iso.add(appleSpur.translate(1.7, 0, -tV + 1).rotateZ(Point(2.5, 2.5, 0), angle), brown)
     iso.add(appleLeaf.translate(1.7, 0, -tV + 1).rotateZ(Point(2.5, 2.5, 0), angle), green)
     
-    // makeGrid(12, 12, 0, new Color(100, 100, 100, 0.6))
     //loop with RAF
     if (rotating && angle < Math.PI / 4 && !flip) {
         angle += 0.005
