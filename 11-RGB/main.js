@@ -61,9 +61,6 @@ function generateBlobs(positionX, positionY) {
     })
 }
 
-
-
-
 function setup() {
     createCanvas(window.innerWidth, window.innerHeight)
 
@@ -86,4 +83,3 @@ function draw() {
 function mousePressed() {
     generateBlobs(mouseX - width / 2, mouseY - height / 2)
 }
-  
