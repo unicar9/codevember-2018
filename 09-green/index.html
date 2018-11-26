@@ -1,26 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src=""></script>
-    <title>Green</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/p5.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet">
+  <script src="datagui.min.js"></script>
+  <title>GREEN</title>
+  <style>
+    html, body {
+      margin: 0;
+      overflow: hidden;
+      cursor: pointer;
+    }
 
-    <style>
-        body {
-            margin: 0;
-            overflow: hidden;
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            /* background: black; */
-        }
-    </style>
+    p {
+        position: absolute;
+        text-align: center;
+        color: #64c9ab;
+        font-family: 'Courgette', cursive;
+        font-size: 35px;
+        font-weight: bold;
+        top: -10%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        animation: fadeOut 3s ease-out;
+        opacity: 0;
+    }
+
+    @keyframes fadeOut {
+        0% { opacity: 1; top: 20%; }
+        50% { opacity: 1; top: 20%; }
+        100% { opacity: 0; top: -10%; }
+    }
+  </style>
 </head>
 <body>
-    <script src="main.js"></script>
+  <p>Double click anywhere on the screen to see your succulent plant grow!</p>
+  <script src="main.js"></script>
 </body>
 </html>
